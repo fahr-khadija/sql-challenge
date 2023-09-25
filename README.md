@@ -23,30 +23,30 @@ last_name  string INDEX
 sex  string
 hire_date string 
 
-Departement as D
+Dept_manager as DM
 -
-dept_no   PK string
-dept_name string 
+dept_no PK string
+emp_no int FK >- E.emp_no  FK >- S.emp_no FK >- DE.emp_no
 
 Dept_emp as DE
 -
 emp_no PK int
 dept_no string  FK >- DM.dept_no  FK >- D.dept_no
 
-Dept_manager as DM
+Departement as D
 -
-dept_no PK string
-emp_no int FK >- E.emp_no  FK >- S.emp_no FK >- DE.emp_no
-
-Salaries as S
--
-emp_no PK int
-salary  money
+dept_no   PK string
+dept_name string 
 
 Title as T
 -
 title_id  PK string
 title  string
+
+Salaries as S
+-
+emp_no PK int
+salary  money
 ```
 
 ![QuickDBD-Free Diagram (1)](https://github.com/fahr-khadija/sql-challenge/assets/100168693/249c88a1-6b99-457e-adee-37f0cdd3a97c)
