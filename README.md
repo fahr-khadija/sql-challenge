@@ -1,4 +1,4 @@
-# sql-challenge
+# SQL-challenge
 
   ## Background
 It’s been two weeks since you were hired as a new data engineer at Pewlett Hackard (a fictional company). 
