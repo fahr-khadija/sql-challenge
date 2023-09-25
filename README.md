@@ -12,7 +12,7 @@ This Challenge is divided into three parts: data modeling, data engineering, and
 
 ## Data Modeling
 After Inspecting  the 6 CSV files, I sketch an Entity Relationship Diagram of the tables.by using a  QuickDBDLinks tool .
-
+```
 Employees
 -
 emp_no PK int
@@ -47,6 +47,7 @@ Title
 -
 title_id  PK int
 title  string
+```
 
 ![QuickDBD-Free Diagram (1)](https://github.com/fahr-khadija/sql-challenge/assets/100168693/249c88a1-6b99-457e-adee-37f0cdd3a97c)
 
