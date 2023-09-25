@@ -13,39 +13,39 @@ This Challenge is divided into three parts: data modeling, data engineering, and
 ## Data Modeling
 After Inspecting  the 6 CSV files, I sketch an Entity Relationship Diagram of the tables.by using a  QuickDBDLinks tool .
 ```
-Employees
+Employees as E
 -
 emp_no PK int
-emp_title string FK >- Title.title_id
+emp_title string FK >- T.title_id
 birth_date string
-first_name  string
-last_name  string
+first_name  string INDEX
+last_name  string INDEX
 sex  string
 hire_date string 
 
-Departement
+Departement as D
 -
-dept_no   PK int
+dept_no   PK string
 dept_name string 
 
-Dept_emp
--
-emp_no dec FK  >- Employees.emp_no
-dept_no dec 
-
-Dept_manager
--
-dept_no PK int
-emp_no int FK >- Employees.emp_no
-
-Salaries
+Dept_emp as DE
 -
 emp_no PK int
-salary  dec 
+dept_no string  FK >- DM.dept_no  FK >- D.dept_no
 
-Title
+Dept_manager as DM
 -
-title_id  PK int
+dept_no PK string
+emp_no int FK >- E.emp_no  FK >- S.emp_no FK >- DE.emp_no
+
+Salaries as S
+-
+emp_no PK int
+salary  money
+
+Title as T
+-
+title_id  PK string
 title  string
 ```
 
