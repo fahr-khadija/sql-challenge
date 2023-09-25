@@ -11,7 +11,43 @@ Instructions
 This Challenge is divided into three parts: data modeling, data engineering, and data analysis.
 
 ## Data Modeling
-Inspect the CSV files, and then sketch an Entity Relationship Diagram of the tables. To create the sketch, feel free to use a tool like QuickDBDLinks to an external site..
+After Inspecting  the 6 CSV files, I sketch an Entity Relationship Diagram of the tables.by using a  QuickDBDLinks tool .
+
+Employees
+-
+emp_no PK int
+emp_title string FK >- Title.title_id
+birth_date string
+first_name  string
+last_name  string
+sex  string
+hire_date string 
+
+Departement
+-
+dept_no   PK int
+dept_name string 
+
+Dept_emp
+-
+emp_no dec FK  >- Employees.emp_no
+dept_no dec 
+
+Dept_manager
+-
+dept_no PK int
+emp_no int FK >- Employees.emp_no
+
+Salaries
+-
+emp_no PK int
+salary  dec 
+
+Title
+-
+title_id  PK int
+title  string
+
 ![QuickDBD-Free Diagram (1)](https://github.com/fahr-khadija/sql-challenge/assets/100168693/249c88a1-6b99-457e-adee-37f0cdd3a97c)
 
 
