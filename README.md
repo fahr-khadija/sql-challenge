@@ -53,12 +53,16 @@ salary  money
 
 
 ## Data Engineering
-Use the provided information to create a table schema for each of the six CSV files. Be sure to do the following:
+### Create a table schema for each of the six CSV files. Be sure to do the following:
 
 Remember to specify the data types, primary keys, foreign keys, and other constraints.
 
 For the primary keys, verify that the column is unique. Otherwise, create a composite keyLinks to an external site., which takes two primary keys to uniquely identify a row.
 
+
+### Import each CSV file into its corresponding SQL table.
+under the SQL Db already create , in the each table , right clic on it and clic on Import/export , specify the link of the CSV file and add header  and click ok  to import this CSV file in the corresponding SQL table 
+make this for all 6 tables already creat it .
 
 
 ## Data Analysis
