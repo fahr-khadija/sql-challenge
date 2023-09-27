@@ -56,10 +56,11 @@ FROM departments;
 
 CREATE TABLE deptmanager
 (
-	dept_no VARCHAR(20) NOT NULL PRIMARY KEY,
+	dept_no VARCHAR(20) NOT NULL,
 	emp_no INT NOT NULL,
+	PRIMARY KEY (dept_no, emp_no),
 	FOREIGN KEY (emp_no) REFERENCES employees (emp_no),
-	FOREIGN KEY (emp_no) REFERENCES salaries(emp_no)
+	FOREIGN KEY (dept_no) REFERENCES departments (dept_no)
 );
 
 SELECT* 
@@ -67,15 +68,14 @@ FROM deptmanager;
 
 CREATE TABLE deptemployee
 (
-	emp_no INT NOT NULL PRIMARY KEY,
+	emp_no INT NOT NULL,
 	dept_no VARCHAR(20)NOT NULL ,
-	FOREIGN KEY (dept_no) REFERENCES departments (dept_no),
-	FOREIGN KEY (dept_no) REFERENCES deptmanager (dept_no)
+    PRIMARY KEY (emp_no, dept_no),
+	FOREIGN KEY (emp_no) REFERENCES employees (emp_no),
+	FOREIGN KEY (dept_no) REFERENCES departments (dept_no)
 );
 
-SELECT* 
+SELECT * 
 FROM deptemployee;
-
-
 
 
